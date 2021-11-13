@@ -1,0 +1,23 @@
+[package]
+name = "rust-shop"
+version = "0.1.0"
+authors = ["Rémi Caumette <remicaumette@icloud.com>"]
+edition = "2018"
+
+[[bin]]
+name = "rust-shop"
+path = "src/main.rs"
+
+[lib]
+path = "src/lib.rs"
+
+[dependencies]
+actix-web = "4.0.0-beta.10"
+actix-rt = "2.2.0"
+actix-http = "2.2.1"
+sqlx = { version = "0.5", features = ["runtime-actix-rustls", "postgres", "chrono"] }
+anyhow = "1.0.45"
+uuid = { version = "0.8.2", features = ["serde"] }
+chrono = { version = "0.4.19", features = ["serde"] }
+serde = "1.0.130"
+serde_json = "1.0.70"
